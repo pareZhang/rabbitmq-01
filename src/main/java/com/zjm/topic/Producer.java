@@ -21,8 +21,9 @@ public class Producer {
          * 声明交换机
          * 参数1：交换机名称
          * 参数2：交换机类型，fanout，topic，direct，headers
+         * 参数3：是否持久化交换机
          */
-        channel.exchangeDeclare(TOPIC_EXCHANGE, BuiltinExchangeType.TOPIC);
+        channel.exchangeDeclare(TOPIC_EXCHANGE, BuiltinExchangeType.TOPIC,true);
         /**
          * 声明队列
          * 参数1：队列名称
